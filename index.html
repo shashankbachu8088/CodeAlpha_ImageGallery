@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha | Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <div class="logo">CodeAlpha <span>Gallery.</span></div>
+        <p>Image Gallery Internship Project</p>
+    </div>
+    <div class="header-label">✦ Creative Collection</div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Explore the <span>Gallery</span></h1>
+        <p>A collection of beautiful places, nature and architecture.<br>
+        Discover every image with an interactive viewing experience.</p>
+    </section>
+
+    <section class="toolbar">
+        <div class="filters" id="filters">
+            <button class="filter active" data-category="all">All</button>
+            <button class="filter" data-category="nature">Nature</button>
+            <button class="filter" data-category="architecture">Architecture</button>
+            <button class="filter" data-category="travel">Travel</button>
+            <button class="filter" data-category="animals">Animals</button>
+        </div>
+
+        <input
+            class="search-box"
+            id="search"
+            type="search"
+            placeholder="🔍 Search images..."
+            aria-label="Search images"
+        >
+    </section>
+
+    <p class="stats" id="stats" aria-live="polite"></p>
+
+    <section class="gallery" id="gallery" aria-label="Image gallery">
+        <p class="empty" id="empty">No images found. Try another search.</p>
+    </section>
+</main>
+
+<div class="lightbox" id="lightbox"
+     role="dialog" aria-modal="true" aria-label="Image viewer">
+
+    <button class="close" id="close" aria-label="Close viewer">×</button>
+    <button class="nav-btn prev" id="prev" aria-label="Previous image">‹</button>
+
+    <img id="largeImage" src="" alt="">
+
+    <h2 id="largeTitle"></h2>
+    <p id="largeDescription"></p>
+
+    <button class="nav-btn next" id="next" aria-label="Next image">›</button>
+</div>
+
+<footer>
+    Designed for CodeAlpha Internship · Image Gallery Project
+</footer>
+
+</body>
+</html>
